@@ -69,11 +69,11 @@ const getWeatherDataFromApi = async () => {
     list.prepend(createdLi);
 
     //* Capturing
-    // createdLi.addEventListener("click", (e) => {
-    //   if (e.target.tagName == "IMG") {
-    //     e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
-    //   }
-    // });
+    createdLi.addEventListener("click", (e) => {
+      if (e.target.tagName == "IMG") {
+        e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
+      }
+    });
 
     //* Bubling
     // createdLi.addEventListener("click", (e) => {
@@ -99,9 +99,9 @@ const getWeatherDataFromApi = async () => {
   }
 
   //window onload
-  document.querySelector(".cities").addEventListener("click", (e) => {
-    if (e.target.tagName == "IMG") {
-      alert("img is clicked!!!");
-    }
-  });
+  //   document.querySelector(".cities").addEventListener("click", (e) => {
+  //     if (e.target.tagName == "IMG") {
+  //       alert("img is clicked!!!");
+  //     }
+  //   });
 };
