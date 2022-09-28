@@ -71,8 +71,14 @@ const getWeatherDataFromApi = async () => {
     //* Capturing
     createdLi.addEventListener("click", (e) => {
       if (e.target.tagName == "IMG") {
-        e.target.src = e.target.src == icaonUrl ? iconUUrlAWS : iconUrl;
+        e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
       }
+    });
+
+    //* Bubling
+    createdLi.addEventListener("click", (e) => {
+      alert(`${e.target.tagName} element is clicked!!`);
+      window.location.href = "https://clarusway.com/";
     });
 
     form.reset();
