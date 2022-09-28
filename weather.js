@@ -69,17 +69,25 @@ const getWeatherDataFromApi = async () => {
     list.prepend(createdLi);
 
     //* Capturing
-    createdLi.addEventListener("click", (e) => {
-      if (e.target.tagName == "IMG") {
-        e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
-      }
-    });
+    // createdLi.addEventListener("click", (e) => {
+    //   if (e.target.tagName == "IMG") {
+    //     e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
+    //   }
+    // });
 
     //* Bubling
-    createdLi.addEventListener("click", (e) => {
-      alert(`${e.target.tagName} element is clicked!!`);
-      window.location.href = "https://clarusway.com/";
-    });
+    // createdLi.addEventListener("click", (e) => {
+    //   alert(`${e.target.tagName} element is clicked!!`);
+    //   window.location.href = "https://clarusway.com/";
+    // });
+    // createdLi.querySelector("figure").addEventListener("click", (e) => {
+    //   alert(`${e.target.tagName} element is clicked!!`);
+    //   // window.location.href = "https://clarusway.com/";
+    // });
+    // createdLi.querySelector("img").addEventListener("click", (e) => {
+    //   alert(`${e.target.tagName} element is clicked!!`);
+    //   // window.location.href = "https://clarusway.com/";
+    // });
 
     form.reset();
   } catch (error) {
@@ -89,4 +97,11 @@ const getWeatherDataFromApi = async () => {
     }, 5000);
     form.reset();
   }
+
+  //window onload
+  document.querySelector(".cities").addEventListener("click", (e) => {
+    if (e.target.tagName == "IMG") {
+      alert("img is clicked!!!");
+    }
+  });
 };
